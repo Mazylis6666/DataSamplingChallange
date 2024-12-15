@@ -89,7 +89,7 @@ unsampledMeasurements = unsampledDataParser(rawData, regexPattern)
 sampledMeasurements = sampleMeasurement(startOfSampling, intervalLength, unsampledMeasurements)
 
 #Output is printed according to task output view
-for meas_type, measurements in sampledMeasurements.items():
+for measType, measurements in sampledMeasurements.items():
     for measurement in measurements:
       output = f"{{{measurement.measurementTime.strftime('%Y-%m-%dT%H:%M:%S')}, {measurement.measurementType.name}, {measurement.value:.2f}}}"
       print(output)
